@@ -12,14 +12,16 @@ namespace Domain.Entities
         public Client Client { get; set; }
 
         [Column(TypeName = "datetime")]
-        public DateTime CreationDate { get; private set; } = DateTime.Now;
+        public DateTime CreationDate { get; private set; }
 
-        public OrderState State { get; private set; } = OrderState.Pendent;
+        public OrderState State { get; private set; }
 
         public Order(Product product, Client client)
         {
             Product = product;
             Client = client;
+            CreationDate = DateTime.Now;
+            State = OrderState.Pendent;
         }
     }
 }
