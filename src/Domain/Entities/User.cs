@@ -23,6 +23,12 @@ public abstract class User
     [Column(TypeName = "nvarchar(100)")]
     public string UserName { get; set; }
 
-    [Column(TypeName = "nvarchar(20)")]
-    public string UserType { get; set; }
+    protected User(string name, string lastName, string password, string email, string userName)
+    {
+        Name = name;
+        LastName = lastName;
+        Password = password;
+        Email = email;
+        UserName = userName;
+    }
 }

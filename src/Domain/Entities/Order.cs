@@ -16,11 +16,6 @@ namespace Domain.Entities
 
         public OrderState State { get; private set; } = OrderState.Pendent;
 
-        public Order()
-        {
-
-        }
-
         public Order(Product product, Client client)
         {
             Product = product;

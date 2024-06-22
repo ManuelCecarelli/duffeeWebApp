@@ -6,7 +6,6 @@ namespace Infrastructure.Data;
 public class ApplicationContext : DbContext
 {
     public DbSet<User> Users { get; set; }
-    public DbSet<Client> Clients { get; set; }
     public DbSet<Product> Products { get; set; }
     public DbSet<Order> Orders { get; set; }
 

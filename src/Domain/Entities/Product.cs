@@ -17,5 +17,13 @@ namespace Domain.Entities
 
         [Column(TypeName = "boolean")]
         public bool IsAvailable { get; set; }
+
+        public Product(string name, decimal price, string description, bool isAvailable)
+        {
+            Name = name;
+            Price = price;
+            Description = description;
+            IsAvailable = isAvailable;
+        }
     }
 }
