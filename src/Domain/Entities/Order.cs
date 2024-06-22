@@ -7,7 +7,7 @@ namespace Domain.Entities
     { 
         public int Id { get; set; }
 
-        public Product RelatedPoduct { get; set; }
+        public Product RelatedProduct { get; set; }
 
         public Client RelatedClient { get; set; }
 
@@ -16,10 +16,15 @@ namespace Domain.Entities
 
         public OrderState State { get; private set; }
 
-        public Order(Product relProduct, Client relClient)
+        public Order()
         {
-            RelatedPoduct = relProduct;
-            RelatedClient = relClient;
+            
+        }
+
+        public Order(Product product, Client client)
+        {
+            RelatedProduct = product;
+            RelatedClient = client;
             CreationDate = DateTime.Now;
             State = OrderState.Pendent;
         }
